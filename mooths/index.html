@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>中秋</title>
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.animate1.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/doT.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide page1">
+				<div style=" width:100px; position:absolute; left:calc(50% - 50px); bottom:0;"><a
+						href="index2.html"><img src="img/jinru.png"></a></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		wx.config({
+			debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+			appId: "wx691164fee0ebc0e3", // 必填，公众号的唯一标识
+			timestamp: {$data['timestamp']}, // 必填，生成签名的时间戳
+			nonceStr: "{$data['nonceStr']}", // 必填，生成签名的随机串
+			signature: "{$data['signature']}",// 必填，签名
+			jsApiList: ['menuItem:share:appMessage', 'menuItem:share:timeline', 'menuItem:openWithQQBrowser'] // 必填，需要使用的JS接口列表
+		});
+		wx.checkJsApi({
+			jsApiList: ['openWithQQBrowser'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+			success: function (res) {
+
+				console.log(res);
+
+				// 以键值对的形式返回，可用的api值true，不可用为false
+				// 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+			}
+		});
+		wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
+			wx.updateAppMessageShareData({
+				title: '最好看的H5', // 分享标题
+				desc: '最好看的H5', // 分享描述
+				link: 'http://zq.oonekj.com/mooths/', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+				imgUrl: '', // 分享图标
+				success: function () {
+					// 设置成功
+				}
+			})
+		});
+	</script>
+</body>
+
+</html>

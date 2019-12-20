@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>后台管理系统 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="__PUBLIC__/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="__PUBLIC__/css/public.css" media="all" />
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1354477_h8s6b7qd1eb.css" media="all" />
+</head>
+<style>
+    .layui-table-click {
+        background-color: #dbdbdb;
+    }
+
+    .layui-table-body {
+        overflow-x: hidden;
+        /* 去滚动条 */
+    }
+
+    .panel_body {
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+    .panel_head {
+        display: inline-block;
+        width: 79%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .panel_foot {
+        width: 20%;
+    }
+
+    .proBox .layui-form-checkbox {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .layui-field-box {
+        text-align: right;
+    }
+
+    .schedule,
+    .project {
+        display: none;
+    }
+
+    .project form {
+        overflow-y: scroll;
+        height: 65vh;
+    }
+
+    .schedule .layui-unselect {
+        width: 100%;
+    }
+
+    .schedule .layui-form-checkbox span,
+    .schedule .layui-form-checked span,
+    .schedule.layui-form-checked:hover span {
+        width: 92%;
+    }
+</style>
+
+<body class="childrenBody">
+    <blockquote class="layui-elem-quote main_btn">
+        <div class="layui-row">
+            <div class="layui-col-md4">
+                活动关联
+            </div>
+            <!-- <div class="layui-col-md3 layui-col-md-offset5">
+                <button class="layui-btn layui-btn-normal addGroup">添加分组</button>
+                <button class="layui-btn editRule">修改权限</button>
+            </div> -->
+        </div>
+    </blockquote>
+    <div class="layui-row layui-col-space15 ">
+        <div class=" layui-col-xs12 layui-col-md4 ">
+            <div class="layui-row layui-form" style="background-color: #fff">
+                <table id="infoList" lay-filter="infoList"></table>
+            </div>
+        </div>
+        <div class=" layui-col-xs12 layui-col-md4 schedule">
+            <div class="layui-row" style="background-color:#fff">
+                <fieldset class="layui-elem-field layui-field-title " style="margin-top: 0px;">
+                    <legend>日程列表</legend>
+                    <div class="layui-field-box">
+                        <button class="layui-btn layui-btn-normal editSch" style="margin-top: 5px;">确认</button>
+                        <input type="hidden" name="id" value="">
+                    </div>
+                </fieldset>
+                <form class="layui-form" action="">
+                </form>
+            </div>
+        </div>
+        <div class=" layui-col-xs12 layui-col-md4 project">
+            <div class="layui-row" style="background-color:#fff">
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 0px;">
+                    <legend>项目列表</legend>
+                    <div class="layui-field-box">
+                        <button class="layui-btn layui-btn-normal editPro" style="margin-top: 5px;">确认</button>
+                        <input type="hidden" name="id" value="">
+                    </div>
+                </fieldset>
+                <form class="layui-form proBox" action="">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var list = {$list};
+        // console.log(list);
+    </script>
+    <script type="text/javascript" src="__PUBLIC__/layui/layui.js"></script>
+    <script type="text/javascript" src="__ADMIN__/js/relation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+{extend name="common/common"}
+{block name="link"}
+<link rel="stylesheet" href="__HOME__/css/sig5.css">
+{/block}
+{block name="style"}
+<style>
+    .highcharts-button-symbol {
+        display: none;
+    }
+
+    .highcharts-button-box {
+        display: none;
+    }
+
+    .highcharts-contextmenu {
+        display: none;
+    }
+
+    .highcharts-label {
+        display: none;
+    }
+
+    .highcharts-credits {
+        display: none;
+    }
+</style>
+{/block}
+{block name="title"}活动流程{/block}
+{block name="body"}
+<div class="wrap">
+    <button class="back btnTo" data-href="/index.php/Index/main">&lt;返回</button>
+    <div class="day-1">
+        <div class="title1"><span>{$name}</span></div>
+        <div class="zhengshu1">
+            <img src="__HOME__/image/zhengshu.png">
+            <div class="box">
+                <div class="hang1">中国第一汽车集团特种产品部</div>
+                <div class="hang2">荣誉证书</div>
+                <div class="hang3">2020年红旗特种产品冰雪特驾训练</div>
+                <div class="hang4">在“<span style="font-weight: bold;">2020年红旗特种产品冰雪特驾训练</span>”<spam>JW10010</spam>
+                    选手：</div>
+                <div class="hang5">评选为“<spam style="font-weight: bold; text-decoration: underline;">卓越个人</spam>”称号
+                </div>
+            </div>
+        </div>
+        <div class="zhengshu2">
+            <img src="__HOME__/image/zhengshu.png">
+        </div>
+        <div id="container" style="min-width:300px;height:300px; margin-top: 50px;"></div>
+    </div>
+</div>
+{/block}
+
+{block name="script"}
+<script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+<script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+<script>
+    var chart = Highcharts.chart('container', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '成绩数据统计图'
+        },
+        xAxis: {
+            categories: [
+                'Day1', 'Day2', 'Day3',
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '成绩'
+            }
+        },
+        tooltip: {
+            // head + 每个 point + footer 拼接成完整的 table
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: '测试成绩',
+            color: '#f38542',
+            data: [52, 65, 59,]
+        }, {
+            name: '考核成绩',
+            color: '#5e9edb',
+            data: [86, 84, 74]
+        },]
+    });
+</script>
+{/block}

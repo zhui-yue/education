@@ -1,0 +1,39 @@
+{extend name="common/common"}
+{block name="link"}
+<link rel="stylesheet" href="__HOME__/css/sig34.css">
+{/block}
+{block name="style"}
+<style>
+    div.arrow:last-child {
+        display: none;
+    }
+
+    p.active {
+        display: none;
+    }
+
+    .arrow1.active {
+        z-index: 1;
+    }
+</style>
+{/block}
+{block name="title"}活动流程{/block}
+{block name="body"}
+<div class="wrap">
+    <button class="back btnTo" data-href="/index.php/Index/main">&lt;返回</button>
+    <div class="day-1">
+        <div class="title1"><span>{$name}</span></div>
+        {volist name="list" id="vo"}
+        <div class="con{$vo.key} {$vo.show} ">
+            <div class="top top{$vo.key}"></div>
+            <p class="p1 {$vo.show}">未完成</p>
+            <div class="bottom">
+                <sapn>{$vo.Pname}</sapn>
+            </div>
+        </div>
+        <div class="{$vo.arrow} {$vo.show} arrow"></div>
+        {/volist}
+        <div class="arrow1 active arrow"></div>
+    </div>
+</div>
+{/block}

@@ -1,0 +1,60 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6,
+p, a,img,ul, li,form, table, caption,tbody, tfoot, thead, tr, th, td{
+margin: 0;padding: 0;border: 0;font-size:18px;vertical-align: baseline;
+}
+ol, ul {list-style: none;
+}
+*{
+    margin:0;
+    padding:0;
+}
+body,html{
+    height:100%;
+    width:100%;
+}
+input,button{
+    border:none;
+    outline:none;
+}
+.wrap{
+    width:100%;
+    height:100%;
+    background-color:green;
+    padding-top: 25%;
+    box-sizing: border-box;
+    background:url("../image/bj2.jpg") no-repeat;
+    background-size:100% 100%;
+    
+   
+}
+/*第二个页面*/
+.detail{
+    text-align: center;
+}
+.imge{
+    width:90%;
+    margin: 0 auto;
+    
+    margin-bottom: 10%;    
+
+}
+.imge img{
+    width:100%;
+}
+.detail-1{
+    color:red;
+}
+.btn-1{
+    width:188px;
+    line-height: 30px;
+    margin:0 auto;
+    display: block;
+    margin-top:20%;
+    border-radius: 10px;
+    color:#fff;
+    background: url(../image/sig1.png) no-repeat;
+    background-size:100% 100%;
+    font-size: 16px;
+    letter-spacing: 3px;
+    
+}

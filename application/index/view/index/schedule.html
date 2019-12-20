@@ -1,0 +1,62 @@
+{extend name="common/common"}
+{block name="link"}
+<link rel="stylesheet" href="__HOME__/css/sig7.css">
+{/block}
+{block name="style"}
+<style>
+    div.arrow:last-child {
+        display: none;
+    }
+
+    p.active {
+        display: none;
+    }
+
+    .arrow1.active {
+        z-index: 1;
+    }
+</style>
+{/block}
+{block name="title"}活动流程{/block}
+{block name="body"}
+<div class="wrap">
+    <button class="back btnTo" data-href="/index.php/Index/main">&lt;返回</button>
+    <div class="day-1">
+        <div class="title1"><span>{$name}</span></div>
+        {if condition='isset($day.Morning)'}
+        <div class="morning {$day.Morning.show}">
+            <div class="morning-img">
+                <p class="p1">未完成</p>
+
+            </div>
+            <div class="morning-word">
+                <span>晨曦拉练</span>
+            </div>
+        </div>
+        <div class="arrow {$day.Morning.show}"></div>
+        {/if}
+        <div class="d">
+            {volist name="list" id="vo"}
+            <div class="d{$vo.key} {$vo.show}">
+                <div class="top top{$vo.key}"></div>
+                <p class="p">未完成</p>
+                <div class="bottom">
+                    <sapn>{$vo.Pname}</sapn>
+                </div>
+            </div>
+            {/volist}
+            {if condition='isset($day.Night)'}
+            <div class="arrow1 {$day.Night.show}"></div>
+            <div class="dark {$day.Night.show}">
+                <div class="dark-img">
+                    <p class="p1">未完成</p>
+                </div>
+                <div class="dark-word">
+                    <span>夜间拉练</span>
+                </div>
+            </div>
+            {/if}
+        </div>
+    </div>
+</div>
+{/block}

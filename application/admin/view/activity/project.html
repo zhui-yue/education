@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>后台管理系统 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="__PUBLIC__/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="__PUBLIC__/css/public.css" media="all" />
+    <STYle>
+        .layui-table-cell {
+            height: auto;
+            line-height: 30px;
+            overflow: visible;
+        }
+
+        .panel_word {
+            margin: 0;
+        }
+
+        .layui-laydate-content>.layui-laydate-list {
+            padding-bottom: 0px;
+            overflow: hidden;
+        }
+
+        .layui-laydate-content>.layui-laydate-list>li {
+            width: 50%
+        }
+
+        .merge-box .scrollbox .merge-list {
+            padding-bottom: 5px;
+        }
+
+        .thumbBox::after {
+            content: "上传签到后-图标";
+        }
+
+        .thumbBox:first-child::after {
+            content: "上传签到前-图标";
+        }
+        .boxTwwo{
+            display: none;
+        }
+    </STYle>
+</head>
+
+<body class="childrenBody">
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-xs12">
+            <blockquote class="layui-elem-quote quoteBox">
+                <form class="layui-form">
+                    <div class="layui-inline">
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input searchVal" placeholder="请输入搜索的内容" />
+                        </div>
+                        <a class="layui-btn search_btn layui-btn-normal" data-type="reload">搜索</a>
+                    </div>
+                </form>
+            </blockquote>
+            <table id="infoList" lay-filter="infoList"></table>
+        </div>
+        <div class="layui-form layui-col-md4 layui-col-xs12" lay-filter="addOrder">
+            <blockquote class="layui-elem-quote title"><i class="seraph icon-caidan"></i> 添加日程</blockquote>
+            <div class="border">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i class="layui-icon">&#xe609;</i>名&nbsp;&nbsp;&nbsp;&nbsp;称</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input addInput" name="name" lay-verify="required"
+                            autocomplete="off" placeholder="请输入项目名称">
+                    </div>
+                </div>
+                <!-- <div class="layui-form-item">
+                    <label class="layui-form-label"><i class="layui-icon">&#xe609;</i>级&nbsp;&nbsp;&nbsp;&nbsp;别</label>
+                    <div class="layui-input-block">
+                        <select name="level">
+                            <option value="0" selected>无级别</option>
+                            <option value="1">初级</option>
+                            <option value="2">中级</option>
+                            <option value="3">考核</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i class="layui-icon">&#xe609;</i>类&nbsp;&nbsp;&nbsp;&nbsp;型</label>
+                    <div class="layui-input-block">
+                        <select name="type">
+                            <option value="0" selected>无类型</option>
+                            <option value="1">测试</option>
+                            <option value="2">考核</option>
+                        </select>
+                    </div>
+                </div> -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i class="layui-icon">&#xe609;</i>选&nbsp;&nbsp;&nbsp;&nbsp;项</label>
+                    <div class="layui-input-block userGroup">
+                        <input type="checkbox" name="option[1]" checked title="签到">
+                        <input type="checkbox" name="option[2]" title="打分">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i class="layui-icon">&#xe609;</i>排&nbsp;&nbsp;&nbsp;&nbsp;序</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input addInput" name="sort" lay-verify="required"
+                            autocomplete="off" placeholder="请输入排序顺序">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i class="layui-icon">&#xe609;</i>图&nbsp;&nbsp;&nbsp;&nbsp;标</label>
+                    <div class="layui-input-block">
+                        <div class="layui-upload-list thumbBox mag0 magt3">
+                            <img class="layui-upload-img thumbImg">
+                        </div>
+                        <div class="layui-upload-list thumbBox boxTwwo mag0 magt3">
+                            <img class="layui-upload-img thumbImg">
+                        </div>
+                    </div>
+                </div>
+                <hr class="layui-bg-gray" />
+                <div class="layui-right">
+                    <a class="layui-btn layui-btn-normal layui-btn-fluid addproject" lay-filter="addproject" lay-submit>
+                        <i class="layui-icon">&#xe609;</i> 确 定
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--操作-->
+    <script type="text/html" id="listBar">
+        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+    </script>
+    <script type="text/javascript" src="__PUBLIC__/layui/layui.js"></script>
+    <script type="text/javascript" src="__ADMIN__/js/project.js"></script>
+</body>
+
+</html>

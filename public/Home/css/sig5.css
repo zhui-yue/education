@@ -1,0 +1,117 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6,
+p, a,img,ul, li,form, table, caption,tbody, tfoot, thead, tr, th, td{
+margin: 0;padding: 0;border: 0;vertical-align: baseline;
+}
+ol, ul {list-style: none;
+}
+*{
+    margin:0;
+    padding:0;
+}
+body,html{
+    height:100%;
+    width:100%;
+}
+input,button{
+    border:none;
+    outline:none;
+}
+.wrap{
+    width:100%;
+    height:100%;
+    background-color:green;
+    box-sizing: border-box;
+    background:url("../image/bj2.jpg") no-repeat;
+    background-size:100% 100%;
+}
+.back{
+    border-radius: 5px;
+    font-size: 12px;
+    width: 55px;
+    /* height: 3%; */
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(../image/sig1.png) no-repeat;
+    background-size: 100% 100%;
+    line-height: 10px;
+    padding: 6px 0;
+    color:#fff;
+}
+.day-1{
+    width: 83%;
+    height: 73%;
+    
+    
+    margin: 0 auto;
+    margin-top: 13%;
+    position: relative;
+    /*display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;*/
+    box-sizing: border-box;
+}
+.title1{
+    width:75%;
+    margin:0 auto;
+    border-radius: 10px;
+    text-align:center;
+    line-height:30px;
+    background-color:#9d0535;
+    color:#fff;
+    letter-spacing: 3px;
+}
+.zhengshu1{
+	width: 100%;
+	margin-top: 30px;
+	position: relative;
+}
+.zhengshu1 img{
+	width: 100%;
+}
+.zhengshu2{
+	width: 100%;
+	margin-top: 30px;
+	position: relative;
+}
+.zhengshu2 img{
+	width: 100%;
+}
+.box{
+	width: 100%;
+	position: absolute;
+	top: 28%;
+}
+.hang1{	
+	width: 100%;
+	font-size: 8px;
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: 2px;
+	font-weight: bold;
+}
+.hang2{
+	width: 100%;
+	font-size: 18px;
+	text-align: center;
+	color: #bd8b55;
+	font-weight: bold;
+	margin-bottom: 4px;
+	font-family: "楷体";
+}
+.hang3{
+	width: 100%;
+	font-size: 9px;
+	text-align: center;
+	margin-bottom: 2px;
+}
+.hang4{
+	width: 100%;
+	font-size: 10px;
+	text-align: center;
+	margin-bottom: 6px;
+}
+.hang5{
+	width: 100%;
+	font-size: 9px;
+	text-align: center;
+}

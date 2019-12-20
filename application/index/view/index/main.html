@@ -1,0 +1,17 @@
+{extend name="common/common"}
+{block name="link"}
+<link rel="stylesheet" href="__HOME__/css/sig34.css">
+{/block}
+{block name="title"}详细日程{/block}
+{block name="body"}
+<div class="wrap">
+    <button class="back btnTo" data-href="/index.php/Index/index">&lt;返回</button>
+    <div class="day1">
+        {volist name="list" id="vo"}
+        <button class="btn2 btnTo{if condition='$vo.type eq 1'} gray{/if}"
+            data-href="/index.php/Index/schedule/id/{$vo.Sid}/temp/{$vo.link}">{$vo.Sname}</button>
+        {/volist}
+        <button class="btn2 btnTo gray" data-href="/index.php/Index/scoreQuery">成绩查询</button>
+    </div>
+</div>
+{/block}

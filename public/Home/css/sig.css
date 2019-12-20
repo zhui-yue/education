@@ -1,0 +1,81 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6,
+p, a,img,ul, li,form, table, caption,tbody, tfoot, thead, tr, th, td{
+margin: 0;padding: 0;border: 0;font-size:16px;vertical-align: baseline;
+}
+ol, ul {list-style: none;
+}
+body,html{
+    height:100%;
+    width:100%;
+}
+input,button{
+    border:none;
+    outline:none;
+}
+*{
+    margin:0;
+    padding:0;
+}
+/*第一个页面*/
+.wrap{
+    width:100%;
+    height:100%;
+    padding-top: 30%;
+    box-sizing: border-box;
+    background:url("../image/bj.jpg") no-repeat;
+    background-size: 100% 100%;
+   
+}
+.login{
+    width: 70%;
+    height: 180px;
+    margin: 0 auto;
+    border: 4px solid #fff;
+    box-sizing: border-box;
+    box-shadow: 8px 8px 5px rgb(75, 78, 75);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-right: 4px solid rgb(138, 137, 137);
+    border-bottom: 4px solid rgb(138, 137, 137);
+    background-color: rgba(0,0,0,0.6);
+    padding-top:20px;
+}
+.login-1{
+    flex:1;
+}
+.words-1{
+    font-size:18px;
+    color:#fff;
+    letter-spacing: 3px;
+}
+.login-2{
+    flex:1;
+}
+.words-2{
+    color:rgb(250, 244, 244);
+    letter-spacing: 3px;
+}
+.login-2 input{
+    background-color:transparent;
+    border:1px solid #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color:#fff;
+}
+.login-3{
+    flex:1;
+}
+.login-3 button{
+    width: 188px;
+    border-radius: 10px;
+    line-height: 30px;
+    color: #fff;
+    background: url(../image/sig1.png) no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    letter-spacing: 3px;
+    font-size:16px;
+}
+

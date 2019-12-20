@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>后台管理系统 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="__PUBLIC__/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="__PUBLIC__/css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <blockquote class="layui-elem-quote main_btn">
+        <div>菜单列表</div>
+    </blockquote>
+    <div class="layui-row layui-col-space10">
+        <form class="layui-form layui-col-md4 layui-col-xs12 " lay-filter="addform">
+            <blockquote class="layui-elem-quote title"><i class="layui-icon">&#xe609;</i>分类目录</blockquote>
+            <div class="border">
+                <input type="hidden" name="id" value="" class="layui-input">
+                <div class="layui-form-item magt3">
+                    <label class="layui-form-label">名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" placeholder="请输入" autocomplete="off" class="layui-input "
+                            lay-verify="required">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">链接</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="href" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">权限</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="controller" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">图标</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="icon" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">排序</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="sort" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">分级</label>
+                    <div class="layui-input-block">
+                        <select name="pid" lay-filter="aihao">
+                            <option value="0">顶级菜单</option>
+                            {$option}
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">类型</label>
+                    <div class="layui-input-block">
+                        <select name="type" lay-filter="aihao">
+                            <option value="1">菜单</option>
+                            <option value="2">按钮</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item" pane>
+                    <label class="layui-form-label">启用</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" lay-filter="hide" name="status" value="1" lay-skin="switch" lay-text="是|否"
+                            title="是否隐藏">
+                    </div>
+                </div>
+                <hr class="layui-bg-gray" />
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn addmenu" lay-submit lay-filter="addmenu">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary btn-reset">重置</button>
+                    </div>
+                </div>
+                <!-- 更多表单结构排版请移步文档左侧【页面元素-表单】一项阅览 -->
+            </div>
+        </form>
+        <div class="layui-col-md8 layui-col-xs12">
+            <div class="pad20" id="navlist"></div>
+        </div>
+    </div>
+    <script>
+        var dataArr = {$menutree};
+    </script>
+    <script type="text/javascript" src="__PUBLIC__/layui/layui.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/page/menu.js"></script>
+    <!-- <script type="text/javascript" src="__PUBLIC__/js/cache.js"></script> -->
+</body>
+
+</html>

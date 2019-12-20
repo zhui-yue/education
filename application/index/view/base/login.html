@@ -1,0 +1,43 @@
+{extend name="common/common"}
+{block name="title"}学员登录{/block}
+{block name="body"}
+<div class="wrap">
+    <div class="login">
+        <div class="login-1">
+            <span class="words-1">
+                学员登录
+            </span>
+        </div>
+        <div class="login-2">
+            <span class="words-2">学员编码</span>&nbsp;&nbsp;
+            <input type="text" name="uid" size="12" maxlength="8">
+        </div>
+        <div class="login-3">
+            <button type="button" class="btn1">确定</button>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="script"}
+<script src="__PUBLIC__/layer_mobile/layer.js" charset="utf-8"></script>
+<script>
+    //Initialization 
+    $(document).ready(function () {
+        $(".btn1").on('click', function () {
+            $.post("{:url('login')}", {
+                uid: $("input[name=uid]").val()
+            }, function (res) {
+                console.log(res);
+                layer.open({
+                    content: res.msg,
+                    skin: 'footer'
+                });
+                if (res.code) {
+                    window.location.replace(res.url);
+                }
+            })
+            // return false;
+        })
+    });
+</script>
+{/block}

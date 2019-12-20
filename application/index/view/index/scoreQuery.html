@@ -1,0 +1,19 @@
+{extend name="common/common"}
+{block name="link"}
+<link rel="stylesheet" href="__HOME__/css/sig9.css">
+{/block}
+{block name="title"}成绩查询{/block}
+{block name="body"}
+<div class="wrap">
+    <button class="back btnTo" data-href="/index.php/Index/main">&lt;返回</button>
+    <div class="day-1">
+        <div class="title1"><span>成绩查询</span></div>
+        <div class="result">
+            <button class="btn1 btnTo gray" data-href="/index.php/Index/scoreQuery/temp/fitness">体能测试</button>
+            <button class="btn2 btnTo gray" data-href="/index.php/Index/scoreQuery/temp/primary">初级培训</button>
+            <button class="btn3 btnTo gray" data-href="/index.php/Index/scoreQuery/temp/interme">中级培训</button>
+            <button class="btn4 btnTo gray" data-href="/index.php/Index/scoreQuery/temp/assess">中级培训&考核</button>
+        </div>
+    </div>
+</div>
+{/block}

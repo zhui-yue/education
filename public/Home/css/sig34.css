@@ -1,0 +1,226 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6,
+p, a,img,ul, li,form, table, caption,tbody, tfoot, thead, tr, th, td{
+margin: 0;padding: 0;border: 0;font-size:16px;vertical-align: baseline;
+}
+ol, ul {list-style: none;
+}
+*{
+    margin:0;
+    padding:0;
+}
+body,html{
+    height:100%;
+    width:100%;
+}
+input,button{
+    border:none;
+    outline:none;
+}
+.wrap{
+    width:100%;
+    height:100%;
+    background-color:green;
+    box-sizing: border-box;
+    background:url("../image/bj2.jpg") no-repeat;
+    background-size:100% 100%;
+}
+
+/*第三个页面*/
+.back{
+    border-radius: 5px;
+    font-size: 12px;
+    width: 55px;
+    /* height: 3%; */
+    margin-top: 15px;
+    margin-left: 15px;
+    background: url(../image/sig1.png) no-repeat;
+    background-size: 100% 100%;
+    line-height: 10px;
+    padding: 6px 0;
+    color:#fff;
+}
+
+.day1{
+    width: 70%;
+    height: 60%;
+   
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.day1 button{
+    display: block;
+    border-radius: 10px;
+    line-height: 50px;
+    /* height: 11%; */
+    color:#fff;
+    font-size:16px;
+   
+}
+.btn1,.btn6{
+    background:url("../image/sig1.png") no-repeat;
+    background-size:100% 100%;
+}
+.btn2,.btn3,.btn4,.btn5{
+    background:url("../image/gray.png") no-repeat;
+    background-size:100% 100%;
+}
+.btn2.gray,.btn3.gray,.btn4.gray,.btn5.gray{
+    background:url("../image/sig1.png") no-repeat;
+    background-size:100% 100%;
+}
+
+/*第四个页面*/
+.day-1{
+    width: 80%;
+    height: 73%;
+    
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 13%;
+    position: relative;
+}
+.title1{
+    width:90%;
+    margin:0 auto;
+    border-radius: 10px;
+    text-align:center;
+    line-height:30px;
+    background-color:#9d0535;
+    color:#fff;
+    letter-spacing: 3px;
+}
+.con1,.con2,.con3{
+    width: 38%;
+    height: 26%;
+    
+    box-sizing: border-box;
+    margin-top: 10%;
+    margin-left: 10%;
+    position: relative;
+    
+}
+.top{
+	width:100%;
+    height:80%;
+    box-sizing: border-box;
+    border-radius: 8px 8px 0 0;
+}
+.con1 .top1{
+    background: url("../icon/wsig.png") no-repeat center center;
+    background-size:50% 50%;
+    background-color: #ced9dd;    
+}
+.con1 .p1,.con2 .p1,.con3 .p1{
+    color: #9d0535;
+    position: absolute;
+    top: 27%;
+    left: 23%;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+.con1 .bottom,.con2 .bottom,.con3 .bottom{
+    width:100%;
+    height: 20%;
+    background-color: #81949a;
+    text-align: center;
+    color:white;
+    letter-spacing: 3px;
+    line-height: 23px;
+    border-radius: 0 0 8px 8px;
+    font-weight: bolder;
+}
+.arrow1{
+    width: 26%;
+    height: 10%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 24%;
+    left: 53%;
+    
+    background:url("../icon/grarrow.png") no-repeat;
+    background-size:100% 100%;
+}
+.arrow1.active{
+    width: 26%;
+    height: 10%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 24%;
+    left: 53%;
+    
+    background:url("../icon/rrarror.png") no-repeat;
+    background-size:100% 100%;
+}
+.con2{
+    margin-top: 8%;
+    margin-left: 53%;
+   
+}
+.con2 .top2{
+    background: url("../icon/wtrain.png") no-repeat center center;
+    background-size:50% 50%;
+    background-color: #ced9dd;
+}
+.arrow2{
+    width: 26%;
+    height: 10%;
+    position: absolute;
+    top: 54%;
+    left: 21%;
+
+    background:url("../icon/lgarrow.png") no-repeat;
+    background-size:100% 100%;
+}
+.arrow2.active{
+    width: 26%;
+    height: 10%;
+    position: absolute;
+    top: 54%;
+    left: 21%;
+
+    background:url("../icon/lrarror.png") no-repeat;
+    background-size:100% 100%;
+}
+.con3{
+    margin-top:6%;
+}
+.con3 .top3{
+    background: url("../icon/wfitness.png") no-repeat center center;
+    background-size:36% 50%;
+    background-color: #ced9dd;
+}
+
+.active .top1{
+    background: url("../icon/rsig.png") no-repeat center center;
+    background-size:50% 50%;
+    background-color: #ced9dd;
+}
+.active .bottom{
+    width:100%;
+    height: 20%;
+    background-color: #81949a;
+    text-align: center;
+    color:#9d0535;
+    letter-spacing: 3px;
+    line-height: 23px;
+    border-radius: 0 0 8px 8px;
+    font-weight: bolder;
+}
+.active .p1{
+    display: none;
+}
+.active .top2{
+    background: url("../icon/rpei.png") no-repeat center center;
+    background-size:50% 50%;
+    background-color: #ced9dd;
+}
+.active .top3{
+    background: url("../icon/rti.png") no-repeat center center;
+    background-size:36% 50%;
+    background-color: #ced9dd;
+}

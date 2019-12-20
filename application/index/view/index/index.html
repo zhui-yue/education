@@ -1,0 +1,16 @@
+{extend name="common/common"}
+{block name="link"}
+<link rel="stylesheet" href="__HOME__/css/sig2.css">
+{/block}
+{block name="title"}日程目录{/block}
+{block name="body"}
+<div class="wrap">
+    <div class="imge">
+        <img src="__HOME__/image/time.png">
+    </div>
+    <p class="detail">学员<span class="detail-1">{$info['Uid']}</span>您好，您的房间号是
+        <span class="detail-1">{$info['room']}</span>
+        <p class="detail">请您找好自己的房间进行入住。</p>
+        <button class="btn-1 btnTo" onclick="openHref()" data-href="/index.php/Index/main">详细日程</button>
+</div>
+{/block}
